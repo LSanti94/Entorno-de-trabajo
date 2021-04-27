@@ -1,0 +1,35 @@
+I3-SAVE-TREE(1)                                                            User Contributed Perl Documentation                                                            I3-SAVE-TREE(1)
+
+NAME
+           i3-save-tree - save (parts of) the layout tree for restoring
+
+SYNOPSIS
+           i3-save-tree [--workspace=name|number] [--output=name]
+
+DESCRIPTION
+       Dumps a workspace (or an entire output) to stdout. The data is supposed to be edited a bit by a human, then later fed to i3 via the append_layout command.
+
+       The append_layout command will create placeholder windows, arranged in the layout the input file specifies. Each container should have a swallows specification. When a window is
+       mapped (made visible on the screen) that matches the specification, i3 will put it into that place and kill the placeholder.
+
+       If neither argument is specified, the currently focused workspace will be used.
+
+OPTIONS
+       --workspace=name|number
+           Specifies the workspace that should be dumped, e.g. 1. This can either be a name or the number of a workspace.
+
+       --output=name
+           Specifies the output that should be dumped, e.g. LVDS-1.
+
+VERSION
+       Version 0.1
+
+AUTHOR
+       Michael Stapelberg, "<michael at i3wm.org>"
+
+LICENSE AND COPYRIGHT
+       Copyright 2013 Michael Stapelberg.
+
+       This program is free software; you can redistribute it and/or modify it under the terms of the BSD license.
+
+perl v5.28.1                                                                            2019-01-27                                                                        I3-SAVE-TREE(1)
