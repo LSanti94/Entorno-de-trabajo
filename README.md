@@ -109,7 +109,7 @@
 </table>
 <h2>Créditos</h2>
 <ul>
-<li>Autor: Lsanti94</li>
+<li>Autor: LSanti94</li>
 <li>Inspirado por las siguientes personas y youtubers: 💻leviswings 💻s4vitar 💻Gerry 💻Lupita</li>
 </ul>
 </body>
