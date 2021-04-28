@@ -8,7 +8,7 @@ sleep 3
 echo ""
 echo ""
 
-apt update && apt upgrade -y && apt install -y htop && apt install -y wget curl git && apt install -y zip unzip && apt install -y i3 i3status i3lock dmenu feh compton && apt install -y vim vim-gui-common vim-runtime && apt install -y lightdm lightdm-gtk-greeter lightdm-gtk-greeter-settings && apt install -y terminator && apt install -y firefox-esr && apt install -y scrub
+apt update && apt upgrade -y && apt install -y htop && apt install -y wget curl git && apt install -y zip unzip && apt install -y i3 i3status i3lock dmenu feh compton && apt install -y vim vim-gui-common vim-runtime && apt install -y lightdm lightdm-gtk-greeter lightdm-gtk-greeter-settings && apt install -y terminator && apt install -y firefox-esr && apt install -y scrub && apt install -y cmatrix
 
 mkdir ~/Descargass && cd ~/Descargass && wget https://github.com/Peltoche/lsd/releases/download/0.20.1/lsd-musl_0.20.1_amd64.deb && export PATH=$PATH:/usr/local/sbin:/usr/sbin:/sbin && dpkg -i *.deb && rm -fr *.deb
 
