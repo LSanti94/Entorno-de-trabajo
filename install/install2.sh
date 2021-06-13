@@ -38,7 +38,7 @@ while :
 
         2)  ## Instalación ohmyzsh
             clear
-            sh -c "$(curl -fsSL https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools/install.sh)"
+            sh -c "$(curl -fsSL https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools/install.sh)" && chsh -s $(which zsh)
             read -p "Pulsa una tecla para continuar" input
             continue;;
 
