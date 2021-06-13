@@ -32,7 +32,7 @@ while :
 
         1)  ## Instalción fzf"
             clear
-            git clone --depth 1 https://github.com/junegunn/fzf.git ~/.fzf
+            git clone --depth 1 https://github.com/junegunn/fzf.git ~/.fzf && ~/.fzf/install
             read -p "Pulsa una tecla para continuar" input
             continue;;
 
