@@ -43,7 +43,7 @@ while :
         3)  ## Instalción enlace simbolico"
             clear
             cd
-            ln -s -f /home/ls/.zshrc .zshrc
+            ln -s -f /home/ls/.zshrc .zshrc && chsh -s $(which zsh)
             read -p "Pulsa una tecla para continuar" input
             continue;;
         0)  ## Volver Atrás
