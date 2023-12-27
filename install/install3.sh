@@ -25,6 +25,6 @@ sudo rm -f /root/.zshrc
 
 ## Enlace simbólico para root
 echo -e "$AM 3) Enlace simbólico para root$VE"
-sudo ln -s -f /home/ls/.zshrc /root/.zshrc && sudo chsh -s $(which zsh)
+sudo ln -s -f /home/cloud-devops/.zshrc /root/.zshrc && sudo chsh -s $(which zsh)
 
 echo -e "$VE Proceso completado$CL"

@@ -34,7 +34,7 @@ export PATH=$PATH:/usr/local/sbin:/usr/sbin:/sbin && sudo dpkg -i *.deb && sudo 
 sudo apt install -y zsh-syntax-highlighting zsh-autosuggestions
 sudo mkdir -p /usr/share/zsh-sudo && cd /usr/share/zsh-sudo
 sudo wget https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/plugins/sudo/sudo.plugin.zsh
-sudo chmod +x sudo.plugin.zsh && cd /usr/share/ && sudo chown ls:ls -R zsh-*
+sudo chmod +x sudo.plugin.zsh && cd /usr/share/ && sudo chown cloud-devops:cloud-devops -R zsh-*
 
 # Instalar FZF con sudo
 cd /root/ && sudo git clone --depth 1 https://github.com/junegunn/fzf.git ~/.fzf && ~/.fzf/install
