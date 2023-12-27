@@ -1,6 +1,7 @@
 #!/bin/bash
-#usuario
-echo "Despues del paso 2 ejecutar de nuevo el script pero el paso 3 que te resta"
+
+echo "Ejecutar sin ser root"
+
 ############################
 ##     INSTRUCCIONES      ##
 ############################
@@ -14,48 +15,16 @@ RO="\033[1;31m"  ## Color Rojo
 VE="\033[1;32m"  ## Color Verde
 CL="\e[0m"       ## Limpiar colores
 
-while :
-    do
-        clear
+## Instalación fzf
+echo -e "$AM 1) Instalación fzf$VE"
+git clone --depth 1 https://github.com/junegunn/fzf.git ~/.fzf && ~/.fzf/install
 
-        echo ""
-        echo -e "             $AM Apache2 $RO"
-        echo ""
-        echo -e "   $RO 1)  $VE Instalción fzf"
-        echo -e "   $RO 2)  $VE Instalación ohmyzsh"
-        echo -e "   $RO 3)  $VE powerlevel10k"
-        echo -e "   $RO 0)  $VE Volver atrás$CL"
-        echo ""
+## Instalación ohmyzsh
+echo -e "$AM 2) Instalación ohmyzsh$VE"
+sh -c "$(curl -fsSL https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools/install.sh)" && chsh -s $(which zsh)
 
-    read -p "  → " OPCION
-    case $OPCION in
+## Tema powerlevel10k
+echo -e "$AM 3) Tema powerlevel10k$VE"
+git clone --depth=1 https://github.com/romkatv/powerlevel10k.git ${ZSH_CUSTOM:-$HOME/.oh-my-zsh/custom}/themes/powerlevel10k
 
-        1)  ## Instalción fzf"
-            clear
-            git clone --depth 1 https://github.com/junegunn/fzf.git ~/.fzf && ~/.fzf/install
-            read -p "Pulsa una tecla para continuar" input
-            continue;;
-
-        2)  ## Instalación ohmyzsh
-            clear
-            sh -c "$(curl -fsSL https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools/install.sh)" && chsh -s $(which zsh)
-            read -p "Pulsa una tecla para continuar" input
-            continue;;
-
-        3)  ## Themas powerlevel10k
-            clear
-            git clone --depth=1 https://github.com/romkatv/powerlevel10k.git ${ZSH_CUSTOM:-$HOME/.oh-my-zsh/custom}/themes/powerlevel10k
-            read -p "Pulsa una tecla para continuar" input
-            continue;;
-        0)  ## Volver Atrás
-            clear
-            break;;
-
-        *)  ## Cualquier otra opción que no sea las anteriores
-            clear
-            echo ""
-            echo -e "$RO La opción elegida no es válida$AM introduce otra"
-            read -p "Pulsa una tecla para continuar" input;;
-    esac
-done
-
+echo -e "$VE Proceso completado$CL"
