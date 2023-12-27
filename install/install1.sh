@@ -41,3 +41,6 @@ cd /root/ && sudo git clone --depth 1 https://github.com/junegunn/fzf.git ~/.fzf
 
 # Instalar Zsh
 sudo apt install -y zsh
+
+# Instalación ohmyzsh
+sh -c "$(curl -fsSL https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools/install.sh)" && chsh -s $(which zsh)
