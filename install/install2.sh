@@ -19,12 +19,12 @@ CL="\e[0m"       ## Limpiar colores
 echo -e "$AM 1) Instalación fzf$VE"
 git clone --depth 1 https://github.com/junegunn/fzf.git ~/.fzf && ~/.fzf/install
 
-## Instalación ohmyzsh
-echo -e "$AM 2) Instalación ohmyzsh$VE"
-sh -c "$(curl -fsSL https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools/install.sh)" && chsh -s $(which zsh)
-
 ## Tema powerlevel10k
-echo -e "$AM 3) Tema powerlevel10k$VE"
+echo -e "$AM 2) Tema powerlevel10k$VE"
 git clone --depth=1 https://github.com/romkatv/powerlevel10k.git ${ZSH_CUSTOM:-$HOME/.oh-my-zsh/custom}/themes/powerlevel10k
 
 echo -e "$VE Proceso completado$CL"
+
+## Instalación ohmyzsh
+echo -e "$AM 3) Instalación ohmyzsh$VE"
+sh -c "$(curl -fsSL https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools/install.sh)" && chsh -s $(which zsh)
