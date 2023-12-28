@@ -17,7 +17,7 @@ CL="\e[0m"       ## Limpiar colores
 
 # Instalación ohmyzsh
 echo -e "$AM 2) Tema powerlevel10k$VE"
-sh -c "$(curl -fsSL https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools/install.sh)" && chsh -s $(which zsh) || true
+sudo sh -c "$(curl -fsSL https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools/install.sh)" && chsh -s $(which zsh) || true
 
 ## Instalación powerlevel10k
 echo -e "$AM 1) Instalación powerlevel10k$VE"
