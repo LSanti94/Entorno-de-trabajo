@@ -35,8 +35,8 @@ y utilidades esenciales.
 
 <pre>
 git clone https://github.com/LSanti94/Entorno-de-trabajo.git
-cd Entorno-de-trabajo
-sudo bash install
+cd Entorno-de-trabajo/install
+sudo bash install.sh
 </pre>
 
 <h2>⚙️ Configuración posterior</h2>
@@ -117,14 +117,6 @@ sudo bash install
 </table>
 
 <p><em>(Mod es la tecla Windows/Super)</em></p>
-
-
-<h2>🙌 Créditos</h2>
-<pre>
-Autor: LSanti94
-Inspirado en: s4vitar, Gerry Studios, Lupita Code
-</pre>
-
 
 <h2>📥 Instalación manual</h2>
 
